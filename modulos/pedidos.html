@@ -8,6 +8,7 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
 
 <section class="section">
@@ -18,54 +19,62 @@
         <div class="box">
           <h2 class="title has-text-centered">Formulario de Pedido</h2>
 
-          <form>
+          <form id="formPedido">
 
-            
+
+            <div class="field">
+              <label class="label">Código Producto</label>
+              <div class="control">
+                <input id="codigoProducto" class="input" type="number" placeholder="Ingrese código del producto" required>
+              </div>
+            </div>
+
+
             <div class="field">
               <label class="label">Nombre del Usuario</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Ingrese su nombre" required>
+                <input id="nombreUsuario" class="input" type="text" placeholder="Ingrese su nombre" required>
               </div>
             </div>
 
-            
+
             <div class="field">
               <label class="label">Producto</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Ingrese el producto" required>
+                <input id="nombreProducto" class="input" type="text" placeholder="Ingrese el producto" required>
               </div>
             </div>
 
-            
+
             <div class="field">
               <label class="label">Cantidad</label>
               <div class="control">
-                <input class="input" type="number" placeholder="Ingrese la cantidad" required>
+                <input id="cantidad" class="input" type="number" placeholder="Ingrese la cantidad" required>
               </div>
             </div>
 
-            
+
             <div class="field">
               <label class="label">Dirección</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Ingrese la dirección" required>
+                <input id="direccion" class="input" type="text" placeholder="Ingrese la dirección" required>
               </div>
             </div>
 
-            
+
             <div class="field">
               <label class="label">Teléfono</label>
               <div class="control">
-                <input class="input" type="tel" placeholder="Ingrese su teléfono" required>
+                <input id="telefono" class="input" type="tel" placeholder="Ingrese su teléfono" required>
               </div>
             </div>
 
-            
+
             <div class="field">
               <label class="label">Método de Pago</label>
               <div class="control">
                 <div class="select is-fullwidth">
-                  <select required>
+                  <select id="metodoPago" required>
                     <option value="">Seleccione</option>
                     <option>Efectivo</option>
                     <option>Tarjeta de Crédito</option>
@@ -76,7 +85,15 @@
               </div>
             </div>
 
-            
+
+            <div class="field">
+              <label class="label">Valor a Cancelar</label>
+              <div class="control">
+                <input id="valorCancelar" class="input" type="number" placeholder="Ingrese valor a cancelar" required>
+              </div>
+            </div>
+
+
             <div class="field">
               <div class="control">
                 <button class="button is-primary is-fullwidth" type="submit">
@@ -85,12 +102,17 @@
               </div>
             </div>
 
-            
+
             <div class="field">
               <div class="control">
-                <a href="../index.html"><button class="button is-light is-fullwidth" type="button">Volver al inicio</button></a>
+                <a href="../index.html">
+                  <button class="button is-light is-fullwidth" type="button">
+                    Volver al inicio
+                  </button>
+                </a>
               </div>
             </div>
+
 
           </form>
         </div>
@@ -99,6 +121,9 @@
     </div>
   </div>
 </section>
+
+
+<script src="../js/pedidos.js"></script>
 
 </body>
 </html>

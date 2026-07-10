@@ -8,6 +8,7 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
 
 <section class="section">
@@ -18,41 +19,57 @@
         <div class="box">
           <h2 class="title has-text-centered">Formulario de Contabilidad</h2>
 
-          <form>
+          <form id="formContabilidad">
 
-            
+
             <div class="field">
-              <label class="label">Ingresos</label>
+              <label class="label">Ventas</label>
               <div class="control">
-                <input class="input" type="number" placeholder="Ingrese el valor de ingresos" required>
+                <input id="ventas" class="input" type="number" placeholder="Ingrese las ventas" required>
               </div>
             </div>
 
-            
-            <div class="field">
-              <label class="label">Egresos</label>
-              <div class="control">
-                <input class="input" type="number" placeholder="Ingrese el valor de egresos" required>
-              </div>
-            </div>
 
-            
-            <div class="field">
-              <label class="label">Concepto</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Ingrese el concepto" required>
-              </div>
-            </div>
-
-            
             <div class="field">
               <label class="label">Fecha</label>
               <div class="control">
-                <input class="input" type="date" required>
+                <input id="fecha" class="input" type="date" required>
               </div>
             </div>
 
-            
+
+            <div class="field">
+              <label class="label">Ingresos</label>
+              <div class="control">
+                <input id="ingresos" class="input" type="number" placeholder="Ingrese el valor de ingresos" required>
+              </div>
+            </div>
+
+
+            <div class="field">
+              <label class="label">Egresos</label>
+              <div class="control">
+                <input id="egresos" class="input" type="number" placeholder="Ingrese el valor de egresos" required>
+              </div>
+            </div>
+
+
+            <div class="field">
+              <label class="label">Concepto</label>
+              <div class="control">
+                <input id="concepto" class="input" type="text" placeholder="Ingrese el concepto" required>
+              </div>
+            </div>
+
+
+            <div class="field">
+              <label class="label">Valor</label>
+              <div class="control">
+                <input id="valor" class="input" type="number" placeholder="Ingrese el valor" required>
+              </div>
+            </div>
+
+
             <div class="field">
               <div class="control">
                 <button class="button is-primary is-fullwidth" type="submit">
@@ -61,12 +78,17 @@
               </div>
             </div>
 
-            
+
             <div class="field">
               <div class="control">
-                <a href="../index.html"><button class="button is-light is-fullwidth" type="button">Volver al inicio</button></a>
+                <a href="../index.html">
+                  <button class="button is-light is-fullwidth" type="button">
+                    Volver al inicio
+                  </button>
+                </a>
               </div>
             </div>
+
 
           </form>
         </div>
@@ -75,6 +97,9 @@
     </div>
   </div>
 </section>
+
+
+<script src="../js/contabilidad.js"></script>
 
 </body>
 </html>
