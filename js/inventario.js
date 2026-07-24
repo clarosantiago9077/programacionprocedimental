@@ -10,71 +10,141 @@ function ValidarDatos() {
     let ubicacion = document.getElementById("ubicacion").value;
 
     if (codigo == "") {
-        Swal.fire("Error", "Ingrese el código del producto", "error");
+       Swal.fire({
+  title: "Error",
+  text: "Ingrese el código del producto",
+  icon: "error"
+});
+
         return;
     }
 
     if (isNaN(codigo)) {
-        Swal.fire("Error", "El código solo debe contener números", "error");
+       Swal.fire({
+  title: "Error",
+  text: "El código solo debe contener números",
+  icon: "error"
+});
+
         return;
     }
 
     if (nombre == "") {
-        Swal.fire("Error", "Ingrese el nombre del producto", "error");
+        Swal.fire({
+  title: "Error",
+  text: "Ingrese el nombre del producto",
+  icon: "error"
+});
+
         return;
     }
 
     if (!isNaN(nombre)) {
-        Swal.fire("Error", "El nombre solo debe contener letras", "error");
+        Swal.fire({
+  title: "Error",
+  text: "El nombre solo debe contener letras",
+  icon: "error"
+});
+
         return;
     }
 
     if (cantidad == "") {
-        Swal.fire("Error", "Ingrese la cantidad del producto", "error");
+       Swal.fire({
+  title: "Error",
+  text: "Ingrese la cantidad del producto",
+  icon: "error"
+});
+
         return;
     }
 
     if (isNaN(cantidad)) {
-        Swal.fire("Error", "La cantidad solo debe contener números", "error");
+       Swal.fire({
+  title: "Error",
+  text: "La cantidad solo debe contener números",
+  icon: "error"
+});
+
         return;
     }
 
     if (descripcion == "") {
-        Swal.fire("Error", "Ingrese la descripción del producto", "error");
+       Swal.fire({
+  title: "Error",
+  text: "Ingrese la descripción del producto",
+  icon: "error"
+});
+
         return;
     }
 
     if (marca == "") {
-        Swal.fire("Error", "Ingrese la marca", "error");
+        Swal.fire({
+  title: "Error",
+  text: "Ingrese la marca",
+  icon: "error"
+});
+
         return;
     }
 
     if (!isNaN(marca)) {
-        Swal.fire("Error", "La marca solo debe contener letras", "error");
+       Swal.fire({
+  title: "Error",
+  text: "La marca solo debe contener letras",
+  icon: "error"
+});
+
         return;
     }
 
     if (valor == "") {
-        Swal.fire("Error", "Ingrese el valor del producto", "error");
+      Swal.fire({
+  title: "Error",
+  text: "Ingrese el valor del producto",
+  icon: "error"
+});
+
         return;
     }
 
     if (isNaN(valor)) {
-        Swal.fire("Error", "El valor solo debe contener números", "error");
+        Swal.fire({
+  title: "Error",
+  text: "El valor solo debe contener números",
+  icon: "error"
+});
+
         return;
     }
 
     if (categoria == "") {
-        Swal.fire("Error", "Seleccione una categoría", "error");
+       Swal.fire({
+  title: "Error",
+  text: "Seleccione una categoría",
+  icon: "error"
+});
+
         return;
     }
 
     if (ubicacion == "") {
-        Swal.fire("Error", "Ingrese la ubicación del producto", "error");
+        Swal.fire({
+  title: "Error",
+  text: "Ingrese la ubicación del producto",
+  icon: "error"
+});
+
         return;
     }
 
-    Swal.fire("Correcto", "Producto registrado correctamente", "success");
+   Swal.fire({
+  title: "Correcto",
+  text: "Producto registrado correctamente",
+  icon: "success"
+});
+
 
     console.log("Código:", codigo);
     console.log("Nombre:", nombre);
@@ -86,3 +156,5 @@ function ValidarDatos() {
     console.log("Ubicación:", ubicacion);
 
 }
+
+document.getElementById("guardar2").onclick =ValidarDatos;

@@ -8,63 +8,113 @@ function ValidarDatos() {
     let valor = document.getElementById("valor").value;
 
 
-   
+
 
     if (ventas == "") {
-        Swal.fire("Error", "Ingrese las ventas", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ingrese las ventas",
+            icon: "error"
+        });
+
         return;
     }
 
     if (fecha == "") {
-        Swal.fire("Error", "Ingrese la fecha", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ingrese la fecha",
+            icon: "error"
+        });
+
         return;
     }
 
     if (ingresos == "") {
-        Swal.fire("Error", "Ingrese los ingresos", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ingrese los ingresos",
+            icon: "error"
+        });
+
         return;
     }
 
     if (egresos == "") {
-        Swal.fire("Error", "Ingrese los egresos", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ingrese los egresos",
+            icon: "error"
+        });
+
         return;
     }
 
     if (concepto == "") {
-        Swal.fire("Error", "Ingrese el concepto", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ingrese el concepto",
+            icon: "error"
+        });
+
         return;
     }
 
     if (valor == "") {
-        Swal.fire("Error", "Ingrese el valor", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ingrese el valor",
+            icon: "error"
+        });
+
         return;
     }
 
 
-    
+
 
     if (isNaN(ventas)) {
-        Swal.fire("Error", "Ventas no debe contener letras", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ventas no debe contener letras",
+            icon: "error"
+        });
+
         return;
     }
 
     if (isNaN(ingresos)) {
-        Swal.fire("Error", "Ingresos no debe contener letras", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Ingresos no debe contener letras",
+            icon: "error"
+        });
+
         return;
     }
 
     if (isNaN(egresos)) {
-        Swal.fire("Error", "Egresos no debe contener letras", "error");
+        Swal.fire({
+            title: "Error",
+            text: "Egresos no debe contener letras",
+            icon: "error"
+        });
+
         return;
     }
 
     if (isNaN(valor)) {
-        Swal.fire("Error", "El valor no debe contener letras", "error");
+        Swal.fire({
+            title: "Error",
+            text: "El valor no debe contener letras",
+            icon: "error"
+        });
+
         return;
     }
 
 
-    
+
 
     console.log("----- DATOS CONTABILIDAD -----");
 
@@ -76,10 +126,14 @@ function ValidarDatos() {
     console.log("Valor: " + valor);
 
 
-    Swal.fire(
-        "Correcto",
-        "Los datos fueron registrados correctamente",
-        "success"
-    );
+    Swal.fire({
+        title: "Correcto",
+        text: "Los datos fueron registrados correctamente",
+        icon: "success"
+    });
+
 
 }
+
+
+document.getElementById("guardar").onclick =ValidarDatos;
